@@ -1,7 +1,5 @@
 #include "Texture.h"
 
-#include "Globals.h"
-
 Texture::Texture()
 	:Width(0),
 	Height(0),
@@ -14,7 +12,7 @@ Texture::~Texture()
 
 }
 
-bool Texture::Load(std::string Path)
+bool Texture::Load(const std::string &Path, SDL_Renderer *const Renderer)
 {
 	Free();
 
@@ -32,6 +30,7 @@ bool Texture::Load(std::string Path)
 		New=SDL_CreateTextureFromSurface(Renderer, Surface);
 		if(New==NULL)
 		{
+			SDL_FreeSurface(Surface);
 			return false;
 		}
 
@@ -47,6 +46,51 @@ bool Texture::Load(std::string Path)
 	}
 
 	return Image!=NULL;
+}
+
+#ifdef _SDL_TTF_H
+bool Texture::Load(const std::string &Text, TTF_Font *const Font, const SDL_Color &TextColour, SDL_Renderer *const Renderer)
+{
+	Free();
+
+	SDL_Surface *Surface=TTF_RenderText_Solid(Font, Text.c_str(), TextColour);
+	if(Surface==NULL)
+	{
+		return false;
+	}
+
+	SDL_Texture *New=NULL;
+	New=SDL_CreateTextureFromSurface(Renderer, Surface);
+	if(New==NULL)
+	{
+		SDL_FreeSurface(Surface);
+		return false;
+	}
+
+	Image=New;
+	Width=Surface->w;
+	Height=Surface->h;
+
+	SDL_FreeSurface(Surface);
+
+	return true;
+}
+#endif
+
+void Texture::Render(SDL_Renderer *const Renderer, const int &x, const int &y, const double &Angle, SDL_Point *const Centre, const SDL_RendererFlip &Flip)
+{
+	SDL_Rect RenderQuad={x, y, Width, Height};
+
+	SDL_RenderCopyEx(Renderer, Image, NULL, &RenderQuad, Angle, Centre, Flip);
+}
+
+void Texture::SetColour(const unsigned short &Red, const unsigned short &Green, const unsigned short &Blue)
+{
+	SDL_SetTextureColorMod(Image, (Uint8)Red, (Uint8)Green, (Uint8)Blue);
+}
+void Texture::SetBlendMode(const SDL_BlendMode &Mode)
+{
+	SDL_SetTextureBlendMode(Image, Mode);
 }
 
 unsigned int Texture::GetWidth() const

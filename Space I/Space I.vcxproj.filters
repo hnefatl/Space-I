@@ -9,16 +9,42 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{1ea01759-bdda-4b35-a36e-e7cce1ca2311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Sprites">
+      <UniqueIdentifier>{8e84aafa-815b-4d87-9615-431c32064160}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Sprites\Ships">
+      <UniqueIdentifier>{8f678f16-4ca2-49d0-a4bb-4c7c0029b732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Sprites\Ships\Warships">
+      <UniqueIdentifier>{5627d88a-cbc0-42b1-9ac0-77449f90ac13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Sprites\Ships\Transports">
+      <UniqueIdentifier>{5de7f96f-2a65-4870-8c03-aeffbf507ac7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Sprites\Backgrounds">
+      <UniqueIdentifier>{01ffb20d-8fd2-491e-8dce-ffe4345de688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Sprites\Projectiles">
+      <UniqueIdentifier>{dd5b90ab-a3cb-4884-884b-78297cc9c8c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Sprites\Projectiles\Bullets">
+      <UniqueIdentifier>{13137f1d-e401-4cbc-a2c3-c27e4c86bf14}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Screen.cpp">
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,8 +58,52 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Screen.h">
+    <ClInclude Include="Texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Sprites\Backgrounds\Background1.png">
+      <Filter>Resources\Sprites\Backgrounds</Filter>
+    </Image>
+    <Image Include="Resources\Sprites\Projectiles\Bullets\Bullet1.png">
+      <Filter>Resources\Sprites\Projectiles\Bullets</Filter>
+    </Image>
+    <Image Include="Resources\Sprites\Projectiles\Bullets\Bullet2.png">
+      <Filter>Resources\Sprites\Projectiles\Bullets</Filter>
+    </Image>
+    <Image Include="Resources\Sprites\Projectiles\Bullets\Bullet3.png">
+      <Filter>Resources\Sprites\Projectiles\Bullets</Filter>
+    </Image>
+    <Image Include="Resources\Sprites\Ships\Warships\WarShip1.png">
+      <Filter>Resources\Sprites\Ships\Warships</Filter>
+    </Image>
+    <Image Include="Resources\Sprites\Ships\Warships\WarShip2.png">
+      <Filter>Resources\Sprites\Ships\Warships</Filter>
+    </Image>
+    <Image Include="Resources\Sprites\Ships\Warships\WarShip3.png">
+      <Filter>Resources\Sprites\Ships\Warships</Filter>
+    </Image>
+    <Image Include="Resources\Sprites\Ships\Warships\WarShip4.png">
+      <Filter>Resources\Sprites\Ships\Warships</Filter>
+    </Image>
+    <Image Include="Resources\Sprites\Ships\Transports\Transport1.png">
+      <Filter>Resources\Sprites\Ships\Transports</Filter>
+    </Image>
+    <Image Include="Resources\Sprites\Ships\Transports\Transport2.png">
+      <Filter>Resources\Sprites\Ships\Transports</Filter>
+    </Image>
+    <Image Include="Resources\Sprites\Ships\Transports\Transport3.png">
+      <Filter>Resources\Sprites\Ships\Transports</Filter>
+    </Image>
   </ItemGroup>
 </Project>

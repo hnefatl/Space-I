@@ -83,14 +83,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Globals.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="MenuScreen.cpp" />
+    <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameEntity.h" />
-    <ClInclude Include="Screen.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="MenuScreen.h" />
+    <ClInclude Include="Resources.h" />
     <ClInclude Include="Ship.h" />
+    <ClInclude Include="Texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Sprites\Backgrounds\Background1.png" />
+    <Image Include="Resources\Sprites\Projectiles\Bullets\Bullet1.png" />
+    <Image Include="Resources\Sprites\Projectiles\Bullets\Bullet2.png" />
+    <Image Include="Resources\Sprites\Projectiles\Bullets\Bullet3.png" />
+    <Image Include="Resources\Sprites\Ships\Transports\Transport1.png" />
+    <Image Include="Resources\Sprites\Ships\Transports\Transport2.png" />
+    <Image Include="Resources\Sprites\Ships\Transports\Transport3.png" />
+    <Image Include="Resources\Sprites\Ships\Warships\WarShip1.png" />
+    <Image Include="Resources\Sprites\Ships\Warships\WarShip2.png" />
+    <Image Include="Resources\Sprites\Ships\Warships\WarShip3.png" />
+    <Image Include="Resources\Sprites\Ships\Warships\WarShip4.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

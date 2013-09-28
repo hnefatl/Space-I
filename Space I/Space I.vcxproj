@@ -110,6 +110,9 @@
     <Image Include="Resources\Sprites\Ships\Warships\WarShip3.png" />
     <Image Include="Resources\Sprites\Ships\Warships\WarShip4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\Resource Credits.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
